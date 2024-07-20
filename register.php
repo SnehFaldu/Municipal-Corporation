@@ -15,31 +15,25 @@ if ($conn->connect_error) {
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get the form data
+    $workspace = $_POST['workspace'];
     $username = $_POST['username'];
-    $usertype = $_POST['usertype'];
     $email = $_POST['email'];
+    $country = $_POST['country'];
+    $address = $_POST['address'];
+    $mbno = $_POST['mbno'];
+    $usertype = $_POST['usertype'];
+    $job = $_POST['job'];
     $password = $_POST['password'];
+    $about = $_POST['about'];
+
     
-    // Validate inputs
-    if (empty($username) || empty($usertype) || empty($email) || empty($password)) {
-        echo "All fields are required.";
-    } else {
-        // Prepare and bind
-        $stmt = $conn->prepare("INSERT INTO login (username, password, usertype, email) VALUES (?, ?, ?, ?)");
-        $stmt->bind_param("ssss", $username, $password, $usertype,  $email);
-
-        // Execute the statement
-        if ($stmt->execute()) {
-            // Redirect to login page
-            header("Location: pages-login.html");
-            exit();
-        } else {
-            echo "Error: " . $stmt->error;
-        }
-
-        // Close the statement
-        $stmt->close();
-    }
+    $sql = "INSERT INTO registration (workspace, username,user_type,password,job,country,address,phone,email,about)
+    VALUES ('$workspace', '$username', ' $usertype', '$password', '$job', '$country', '$address', '$mbno', '$email', '$about')";
+   if ($conn->query($sql) === TRUE) {
+       echo "Data inserted successfully";
+   } else {
+       echo "Error: " . $sql . "<br>" . $conn->error;
+   }
 }
 
 // Close the connection
