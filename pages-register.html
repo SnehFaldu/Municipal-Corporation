@@ -36,6 +36,8 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
+
 </head>
 
 <body>
@@ -64,7 +66,19 @@
                     <p class="text-center small">Enter your personal details to create account</p>
                   </div>
 
-                  <form class="row g-3 needs-validation" action="register.php" method="post">
+                  <form class="row g-3 needs-validation" action="register.php" method="post" style="width: 500px;">
+
+
+
+                    <div class="col-12">
+                      <label for="yourUsername" class="form-label">Workspace</label>
+                      <div class="input-group has-validation">
+                        <span class="input-group-text" id="inputGroupPrepend">@</span>
+                        <input type="text" name="workspace" class="form-control" id="yourUsername" required>
+                        <div class="invalid-feedback">Please choose a Workspace.</div>
+                      </div>
+                    </div>
+
 
                     <div class="col-12">
                       <label for="yourUsername" class="form-label">Username</label>
@@ -83,10 +97,35 @@
                       <div class="invalid-feedback">Please enter a valid Email adddress!</div>
                     </div>
 
+
+                    <div class="col-12">
+                      <label for="yourEmail" class="form-label">Your Country</label>
+                      <input type="text" name="country" class="form-control" id="yourEmail" required>
+                      <div class="invalid-feedback">Please enter a valid Country</div>
+                    </div>
+
+                    <div class="col-12">
+                      <label for="yourEmail" class="form-label">Your Address</label>
+                      <input type="text" name="address" class="form-control" id="yourEmail" required>
+                      <div class="invalid-feedback">Please enter a valid Address</div>
+                    </div>
+
+                    <div class="col-12">
+                      <label for="yourEmail" class="form-label">Your Mobile Number</label>
+                      <input type="number" name="mbno" class="form-control" id="yourEmail" required >
+                      <div class="invalid-feedback">Please enter a valid Mobile number</div>
+                    </div>
+
                     <div class="col-12">
                       <label for="yourEmail" class="form-label">Your User Identity</label>
                       <input type="email" name="usertype" class="form-control" id="yourEmail" required value="normal" readonly>
                       <div class="invalid-feedback">Please enter a valid Email adddress!</div>
+                    </div>
+
+                    <div class="col-12">
+                      <label for="yourPassword" class="form-label">Job Details</label>
+                      <input type="text" name="job" class="form-control" id="yourPassword" required>
+                      <div class="invalid-feedback">Invalid</div>
                     </div>
 
                    
@@ -95,6 +134,13 @@
                       <label for="yourPassword" class="form-label">Password</label>
                       <input type="password" name="password" class="form-control" id="yourPassword" required>
                       <div class="invalid-feedback">Please enter your password!</div>
+                    </div>
+
+                    <div class="col-12">
+                      <label for="yourEmail" class="form-label">About Yourself</label>
+                      <textarea type="text" name="about" class="form-control" id="yourEmail" required>
+                        </textarea>
+                      <div class="invalid-feedback">Invalid</div>
                     </div>
 
                     <div class="col-12">
