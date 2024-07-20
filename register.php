@@ -1,5 +1,5 @@
 <?php
-// Database configuration
+// Database configuration ok
 $servername = "localhost";
 $username = "root";
 $password = "jay@6125";
