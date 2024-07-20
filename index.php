@@ -37,18 +37,7 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 </head>
-<?php
-session_name('my_custom_session');
-session_start();
 
-if (!isset($_SESSION['username'])) {
-    header('Location: pages-login.html');
-    exit;
-}
-
-$username = $_SESSION['username'];
-
-?>
 <body>
 
   <!-- ======= Header ======= -->
