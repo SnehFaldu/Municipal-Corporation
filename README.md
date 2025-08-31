@@ -1,2 +1,2 @@
 # Municipal-Corporation
-Project-1 Diploma Computer Engineering
+Diploma Computer Engineering Semester Project-1
