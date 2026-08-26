@@ -1,2 +1,2 @@
 # Municipal-Corporation
-Diploma Computer Engineering Semester Project-1
+Diploma Computer Engineering Final Year Project
